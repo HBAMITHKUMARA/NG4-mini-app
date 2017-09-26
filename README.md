@@ -1,6 +1,3 @@
-# NG4-mini-app
-Angular Application Practice Code.
-
 How to use
 ----------
 
