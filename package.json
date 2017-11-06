@@ -1,6 +1,6 @@
 {
-  "name": "ng4-test",
-  "version": "0.0.0",
+  "name": "NG4-mini-app",
+  "version": "1.0.0",
   "license": "MIT",
   "scripts": {
     "ng": "ng",
