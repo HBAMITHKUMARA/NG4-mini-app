@@ -5,10 +5,11 @@ import { RecipeService } from '../recipes/recipe.service';
 
 @Injectable()
 export class DataStorageService {
-
+  firebaseDB: string = 'https://ami-recipe-book.firebaseio.com/recipes.json';
   constructor(private http: Http, private recipeService: RecipeService) { }
 
   storeRecipes() {
-    return this.http.put('https://ami-recipe-book.firebaseio.com/recipes.json', this.recipeService.getRecipes());
+    return this.http.put(this.firebaseDB, this.recipeService.getRecipes());
   }
+
 }
