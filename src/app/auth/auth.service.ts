@@ -10,7 +10,7 @@ export class AuthService {
     firebase.auth().createUserWithEmailAndPassword(email, password)
       .catch(
         error => console.log()
-      )
+      );
   }
 
 }
