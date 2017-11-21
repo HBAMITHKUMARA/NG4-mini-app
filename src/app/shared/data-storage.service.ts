@@ -14,11 +14,13 @@ export class DataStorageService {
               private authService: AuthService) { }
 
   storeRecipes() {
-    return this.http.put(this.firebaseDB, this.recipeService.getRecipes());
+    const token = this.authService.getToken();
+    return this.http.put(this.firebaseDB + '?auth=' + token, this.recipeService.getRecipes());
   }
 
   getRecipes() {
-    this.http.get(this.firebaseDB)
+    const token = this.authService.getToken();
+    this.http.get(this.firebaseDB + '?auth=' + token)
       .map(
         (response: Response) => {
           const recipes: Recipe[] = response.json();
