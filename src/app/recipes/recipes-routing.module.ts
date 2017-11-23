@@ -8,7 +8,7 @@ import { RecipeDetailComponent } from 'app/recipes/recipe-detail/recipe-detail.c
 import { AuthGuardService } from 'app/auth/auth-guard.service';
 
 const recipesRoutes: Routes = [
-    { path: 'recipes', component: RecipesComponent, children: [
+    { path: '', component: RecipesComponent, children: [
         { path: '', component: RecipeStartComponent },
         { path: 'new', component: RecipeEditComponent, canActivate: [AuthGuardService] },
         { path: ':id', component: RecipeDetailComponent },
