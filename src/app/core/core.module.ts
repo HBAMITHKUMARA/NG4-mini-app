@@ -1,5 +1,4 @@
 import { NgModule } from '@angular/core';
-import { CommonModule } from '@angular/common';
 
 import { HeaderComponent } from 'app/core/header/header.component';
 import { HomeComponent } from 'app/core/home/home.component';
@@ -24,7 +23,6 @@ import { AuthGuardService } from 'app/auth/auth-guard.service';
         AuthGuardService
       ],
     imports: [
-        CommonModule,
         SharedModule,
         AppRoutingModule
     ],
