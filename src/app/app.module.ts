@@ -23,7 +23,6 @@ import { CoreModule } from 'app/core/core.module';
     BrowserModule,
     HttpModule,
     AppRoutingModule,
-    RecipesModule,
     SharedModule,
     ShoppingListModule,
     AuthModule,
