@@ -21,10 +21,12 @@ export class DataStorageService {
 
   getRecipes() {
     const token = this.authService.getToken();
-    this.httpClient.get(this.firebaseDB + '?auth=' + token)
+    this.httpClient.get<Recipe[]>(this.firebaseDB + '?auth=' + token, {
+      observe: 'body',
+      responseType: 'json'
+    })
       .map(
-        (response: Response) => {
-          const recipes: Recipe[] = response.json();
+        (recipes) => {
           for(let recipe of recipes) {
             if(!recipe['ingredients']) {
               recipe['ingredients'] = [];
