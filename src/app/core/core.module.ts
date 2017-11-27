@@ -11,6 +11,7 @@ import { AuthService } from 'app/auth/auth.service';
 import { AuthGuardService } from 'app/auth/auth-guard.service';
 import { HTTP_INTERCEPTORS } from '@angular/common/http';
 import { AuthInterCeptor } from 'app/shared/auth.interceptor';
+import { LoggingInterceptor } from 'app/shared/logging.interceptor';
 
 @NgModule({
     declarations: [
@@ -23,7 +24,8 @@ import { AuthInterCeptor } from 'app/shared/auth.interceptor';
         DataStorageService,
         AuthService,
         AuthGuardService,
-        {provide: HTTP_INTERCEPTORS, useClass: AuthInterCeptor, multi: true}
+        {provide: HTTP_INTERCEPTORS, useClass: AuthInterCeptor, multi: true},
+        {provide: HTTP_INTERCEPTORS, useClass: LoggingInterceptor, multi: true}
       ],
     imports: [
         SharedModule,
