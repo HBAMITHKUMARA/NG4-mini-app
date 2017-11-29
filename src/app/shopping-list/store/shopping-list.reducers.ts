@@ -7,7 +7,7 @@ const initialState = {
         new Ingredient('Apples', 5),
         new Ingredient('Tomatoes', 10),
     ]
-}
+};
 
 export function ShoppingListReducers(state = initialState, action: ShoppingListActions.ShoppingListActions) {
     switch (action.type) {
