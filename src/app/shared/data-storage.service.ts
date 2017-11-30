@@ -8,7 +8,7 @@ import { AuthService } from '../auth/auth.service';
 
 @Injectable()
 export class DataStorageService {
-  firebaseDB: string = '';
+  firebaseDB = '';
   constructor(private httpClient: HttpClient,
               private recipeService: RecipeService,
               private authService: AuthService) { }
