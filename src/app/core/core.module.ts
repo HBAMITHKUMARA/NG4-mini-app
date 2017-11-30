@@ -4,7 +4,6 @@ import { HeaderComponent } from 'app/core/header/header.component';
 import { HomeComponent } from 'app/core/home/home.component';
 import { SharedModule } from 'app/shared/shared.module';
 import { AppRoutingModule } from 'app/app-routing.module';
-import { ShoppingListService } from 'app/shopping-list/shopping-list.service';
 import { RecipeService } from 'app/recipes/recipe.service';
 import { DataStorageService } from 'app/shared/data-storage.service';
 import { AuthService } from 'app/auth/auth.service';
@@ -19,7 +18,6 @@ import { LoggingInterceptor } from 'app/shared/logging.interceptor';
         HomeComponent
     ],
     providers: [
-        ShoppingListService,
         RecipeService,
         DataStorageService,
         AuthService,
@@ -36,6 +34,4 @@ import { LoggingInterceptor } from 'app/shared/logging.interceptor';
         HeaderComponent
     ]
 })
-export class CoreModule{
-
-}
+export class CoreModule {}
